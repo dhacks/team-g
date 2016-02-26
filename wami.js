@@ -109,7 +109,6 @@ function fileReset(){
 
 function clickOnAir( on_air_name ){
     mode = 'play';
-    alert(on_air_name);
     var playUrl = host+'record_data/'+on_air_name+'?_='+(new Date)/1; // キャッシュ回避
     Wami.startPlaying(playUrl,Wami.nameCallback(playStart),Wami.nameCallback(playFinish),Wami.nameCallback(wamiError));
 }
