@@ -150,7 +150,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
           <h3 style="color:black">カテゴリ：<?php print escape($value['category']) ?></h3>
           <!-- 投稿日時 -->
           <p class="small" style="color:black"><?php print $value['created_at'] ?></p>
-          <p class="text-right">
+          <!--<p class="text-right">
             <button type="button" class="btn btn-primary reply-btn">
               <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true" ></span>　いいね
             </button>
@@ -160,6 +160,7 @@ if($_SERVER['REQUEST_METHOD'] == 'GET'){
             </button>
             <?php echo $post_by['bad'] ?>
           </p>
+        -->
         </div>
       </li>
       <?php endif; ?>
