@@ -22,6 +22,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   }
 }
 
+if($_SERVER['REQUEST_METHOD'] == 'GET'){
+  $records = getCategory($db,$_GET['cat']);
+}
+
+
+
 ?>
 <html>
 <head>
@@ -46,24 +52,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
           <a href="#" class="init-bottom">カテゴリ</a>
           <ul class="menu__second-level" style="list-style:none;">
             <li>
-              <input type="radio" name="s3" id="select1" value="1" checked="" href="#">
+<!-- 
+              <input type="radio" name="s3" id="select1" value="1" checked="" href="localhost/dhacks/index.php?cat=couple">
               <label for="select1">カップル</label>
+ -->
+              <a href="index.php?cat=couple">カップル</a>
             </li>
             <li>
-              <input type="radio" name="s3" id="select2" value="2" href="#">
-              <label for="select2">エチケット</label>
+              <a href="index.php?cat=etiquette">エチケット</a>
             </li>
             <li>
-              <input type="radio" name="s3" id="select3" value="3" href="#">
-              <label for="select3">噂</label>
+              <a href="index.php?cat=gossip">噂</a>
             </li>
             <li>
-              <input type="radio" name="s3" id="select4" value="4" href="#">
-              <label for="select4">R18</label>
+              <a href="index.php?cat=r18">R18</a>
             </li>
             <li>
-              <input type="radio" name="s3" id="select5" value="5" href="#">
-              <label for="select5">その他</label>
+              <a href="index.php?cat=others">その他</a>
             </li>
           </ul>
         </li>
@@ -136,7 +141,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <div class="container-fluid" style="text-align:center;">
           <h3 style="color:black">投稿者：<?php echo escape($value['user_name']) ?></h3>
           <!-- 投稿ファイルネーム -->
-          <p class="small text-muted reply-to">@<?php echo escape($post_by['name']) ?></p>
 
           <div class="btn1" id="on_air"  onclick="clickOnAir('<?php echo $post_by['name'] ?>')">
             <div class="play"></div>

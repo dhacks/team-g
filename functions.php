@@ -22,6 +22,21 @@ function getRecord($pdo)
   }
 }
 
+function getCategory($pdo,$category)
+{
+
+  $sql = 'SELECT * FROM records WHERE category=:category ORDER by `created_at` DESC';
+  $statement = $pdo->prepare($sql);
+  $statement->bindValue(':category', $category, PDO::PARAM_STR);
+  $statement->execute();
+
+  if ($rows = $statement->fetchAll(PDO::FETCH_ASSOC)) {
+    return $rows;
+  }else {
+    return false;
+  }
+}
+
 function getRecordData($pdo,$id)
 {
   $sql = 'SELECT * FROM records WHERE id=:id';
