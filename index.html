@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>D村のうわさ - DHacks 2015 winter</title>
+    <meta charset="UTF-8" />
+    <LINK rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <H1>D村のうわさ</h1>
+
+<div class="checker">
+<ul class="menu">
+    <li class="menu__mega">
+        <a href="#" class="init-bottom">タグ</a>
+        <ul class="menu__second-level">
+            <li>
+                <input type="radio" name="s3" id="select1" value="1" checked="" href="#">
+                    <label for="select1">タグ1</label>
+            </li>
+            <li>
+                <input type="radio" name="s3" id="select2" value="2" href="#">
+                <label for="select2">タグ2</label>
+            </li>
+            <li>
+                <input type="radio" name="s3" id="select3" value="3" href="#">
+                <label for="select3">タグ3</label>
+            </li>
+        </ul>
+    </li>
+</ul>
+</div>
+
+    <div class="btn1" id="record" onclick="clickRecord()">
+        <div class="mic"></div></div>
+    <div class="btn1"id="stop" onclick="clickStop()">
+         <div class="play"></div></div>
+    <div class="btn1" id="play" onclick="clickPlay()">
+        <div class="search"></div>
+    <div id="wami"></div>
+    <div id="meter" style="width: 340px; height: 200px;"></div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+<script src="recorder.js"></script>
+<script src="raphael.2.1.0.min.js"></script>
+<script src="justgage.1.0.1.min.js"></script>
+<script src="wami.js"></script> 
+</div>
+</body>
+</html>
+
